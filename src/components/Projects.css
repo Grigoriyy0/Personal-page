@@ -1,0 +1,54 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #f7fafc;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.project-card:hover {
+    border-color: #667eea;
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #4a5568;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-tech span {
+    background: #e2e8f0;
+    color: #4a5568;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.project-btn {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}

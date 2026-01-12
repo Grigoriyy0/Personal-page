@@ -1,0 +1,191 @@
+.experience {
+    background: white;
+    margin: 30px 0;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    position: relative;
+    margin-top: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-marker {
+    position: relative;
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.marker-circle {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.timeline-line {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    bottom: -50px;
+    width: 2px;
+    background: #e2e8f0;
+    z-index: 0;
+}
+
+.timeline-content {
+    flex: 1;
+    background: #f7fafc;
+    padding: 25px;
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.timeline-header h3 {
+    color: #2d3748;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+
+.company {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.period {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.description {
+    color: #4a5568;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.achievements h4,
+.technologies h4 {
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.achievements ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.achievements li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.achievements li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: #e2e8f0;
+    color: #4a5568;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .experience {
+        padding: 20px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-marker {
+        width: 40px;
+    }
+
+    .marker-circle {
+        left: 10px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .timeline-line {
+        left: 18px;
+    }
+
+    .timeline-content {
+        margin-left: 15px;
+        padding: 20px;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .period {
+        align-self: flex-start;
+    }
+}
